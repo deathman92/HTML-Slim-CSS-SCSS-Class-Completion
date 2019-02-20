@@ -251,7 +251,7 @@ function provideCompletionItemsGenerator(languageSelector: string, classMatchReg
 
 function enableEmmetSupport(disposables: Disposable[]) {
     const emmetRegex = /(?=\.)([\w-\. ]*$)/;
-    const languageModes = ["slim", "html", "razor", "php", "latte", "blade", "vue", "twig", "markdown", "erb",
+    const languageModes = ["slim", "html", "razor", "php", "latte", "blade", "edge", "vue", "twig", "markdown", "erb",
         "handlebars", "ejs", "typescriptreact", "javascript", "javascriptreact", "scss", "sass", "css"];
     languageModes.forEach((language) => {
         emmetDisposables.push(provideCompletionItemsGenerator(language, emmetRegex, "", "."));
@@ -267,7 +267,7 @@ function disableEmmetSupport(disposables: Disposable[]) {
 export async function activate(context: ExtensionContext): Promise<void> {
     const disposables: Disposable[] = [];
     const onSave = vscode.workspace.onDidSaveTextDocument((e: vscode.TextDocument) => {
-        if (["twig", "html", "latte", "slim", "xhtml", "css", "scss"].indexOf(e.languageId) > -1) {
+        if (["twig", "html", "latte", "edge", "slim", "xhtml", "css", "scss"].indexOf(e.languageId) > -1) {
             cache([e.uri], true);
         }
     });
@@ -318,7 +318,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
     // HTML based extensions
     // tslint:disable-next-line:max-line-length
-    ["slim", "html", "latte", "razor", "php", "blade", "vue", "twig", "markdown", "erb", "handlebars", "ejs"].forEach((extension) => {
+    ["slim", "html", "latte", "razor", "php", "blade", "edge", "vue", "twig", "markdown", "erb", "handlebars", "ejs"].forEach((extension) => {
         context.subscriptions.push(provideCompletionItemsGenerator(extension, /(class|id|className)=["|']([^"^']*$)/i));
     });
 

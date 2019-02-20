@@ -24,6 +24,7 @@ ID Support:
 * Razor
 * PHP
 * Laravel (Blade)
+* Edge.js (AdonisJS)
 * JavaScript
 * JavaScript React (.jsx)
 * TypeScript React (.tsx)
