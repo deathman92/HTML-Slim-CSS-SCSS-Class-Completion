@@ -1,9 +1,9 @@
 {
-  "name": "html-slim-scss-css-class-completion",
-  "displayName": "IntelliSense for CSS, SCSS class names in HTML, Slim and SCSS",
-  "description": ":class and :id completion for HTML, Latte, Slim, PHP, ERB, Javascript, CSS and SCSS. Just declare class in your template and see it in your CSS/SCSS file. (Both ways)",
-  "version": "1.5.12",
-  "publisher": "gencer",
+  "name": "html-edge-scss-css-class-completion",
+  "displayName": "IntelliSense for CSS, SCSS class names in HTML, Edge and SCSS",
+  "description": ":class and :id completion for HTML, Latte, Slim, PHP, Edge, ERB, Javascript, CSS and SCSS. Just declare class in your template and see it in your CSS/SCSS file. (Both ways)",
+  "version": "1.6.0",
+  "publisher": "deathman92",
   "engines": {
     "vscode": "^1.19.0"
   },
@@ -64,7 +64,7 @@
   },
   "icon": "images/icon.png",
   "repository": {
-    "url": "https://github.com/gencer/HTML-Slim-CSS-SCSS-Class-Completion"
+    "url": "https://github.com/deathman92/HTML-Slim-CSS-SCSS-Class-Completion"
   },
   "main": "./out/src/extension",
   "scripts": {
